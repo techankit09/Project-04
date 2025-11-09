@@ -1,6 +1,6 @@
 package in.co.rays.proj04.bean;
 
-public class MarksheetBean {
+public class MarksheetBean extends BaseBean {
 	
 	private String rollNo;
 	private long studentId;

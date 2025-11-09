@@ -1,6 +1,6 @@
 package in.co.rays.proj04.bean;
 
-public class CourseBean {
+public class CourseBean extends BaseBean {
 
 	private String name;
 	private String duration;

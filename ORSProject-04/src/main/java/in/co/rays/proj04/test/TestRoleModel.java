@@ -17,58 +17,57 @@ import in.co.rays.proj04.bean.RoleBean;
 		public static void main(String[] args) throws Exception {
 			
 			//testAdd();
-			//testUpdate();
+			testUpdate();
 			//testDelete();
 			//testFindByPk();
 			//testFindbyName();
-			  testbySearch();
+			 // testbySearch();
 		}
 		
 		public static void testAdd() throws Exception {
 			
+			try {
+				RoleModel model = new RoleModel();
 				RoleBean bean = new RoleBean();
-				bean.setName("Ankit");
-				bean.setDescription("hr");
+				bean.setName("Kiosk");
+				bean.setDescription("admin");
 				bean.setCreatedBy("admin");
 				bean.setModifiedBy("admin");
 				bean.setCreatedDatetime(new Timestamp(new Date().getTime()));
 				bean.setModifiedDatetime(new Timestamp(new Date().getTime()));
-				
-				RoleModel model = new RoleModel();
-				
-				try {
-					model.add(bean);
-					System.out.println("Role Added Successfully");
-				} catch (ApplicationException e) {
-					e.printStackTrace();
-				}	
+				long pk = model.add(bean);
+				RoleBean addedbean = model.findByPk(pk);
+				if (addedbean == null) {
+					System.out.println("Test add fail");
+				}
+			} catch (ApplicationException | DuplicateRecordException e) {
+				e.printStackTrace();
+			}
 		}
 
 		public static void testUpdate() throws Exception {
 			
-			RoleModel model = new RoleModel();
-			RoleBean bean = new RoleBean();
-
-			bean.setId(1);
-			bean.setName("Ankit");
-			bean.setDescription("hr");
-			bean.setCreatedBy("admin");
-			bean.setModifiedBy("admin");
-			
-			
 			try {
+				RoleModel model = new RoleModel();
+				RoleBean bean = model.findByPk(4L);
+				
+				//bean.setName("Admin");
+				bean.setDescription("kiosk");
+			
 				model.update(bean);
-				System.out.println("Role Updated Successfully");
-			} catch (ApplicationException e) {
+
+				RoleBean updatedbean = model.findByPk(1L);
+				
+			}catch (ApplicationException | DuplicateRecordException e) {
 				e.printStackTrace();
-			}	
-	}
+			}
+		}
 		public static void testDelete() throws Exception {
 			
 			RoleModel model = new RoleModel();
 			RoleBean bean = new RoleBean();
 
-			bean.setId(3);
+			bean.setId(2);
 			
 			try {
 			model.delete(bean);
