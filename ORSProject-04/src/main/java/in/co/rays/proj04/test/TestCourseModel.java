@@ -1,21 +1,21 @@
 package in.co.rays.proj04.test;
 
 import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
-import in.co.rays.proj04.bean.CollegeBean;
+
+import in.co.rays.proj04.bean.CourseBean;
 import in.co.rays.proj04.exception.ApplicationException;
 import in.co.rays.proj04.exception.DuplicateRecordException;
-import in.co.rays.proj04.model.CollegeModel;
+import in.co.rays.proj04.model.CourseModel;
 
-public class TestCollegeModel {
+public class TestCourseModel {
 	
 	public static void main(String[] args) throws Exception {
 		
-		testAdd();
+		//testAdd();
 		//testUpdate();
 		//testDelete();
 		//testFindByPk();
@@ -26,22 +26,21 @@ public class TestCollegeModel {
 
 	public static void testAdd() throws Exception {
 		try {
-			CollegeModel model = new CollegeModel();
-			CollegeBean bean = new CollegeBean();
-
-			bean.setName("IPS");
-			bean.setAddress("Indore");
-			bean.setState("MP");
-			bean.setCity("Indore");
-			bean.setPhoneno("9867564745");
+			CourseModel model = new CourseModel();
+			CourseBean bean = new CourseBean();
+			
+			bean.setName("Python");
+			bean.setId(1);
+			bean.setDuration("6months");
+			bean.setDescription("hr");
 			bean.setCreatedBy("admin");
 			bean.setModifiedBy("admin");
 			bean.setCreatedDatetime(new Timestamp(new Date().getTime()));
 			bean.setModifiedDatetime(new Timestamp(new Date().getTime()));
 			
 			long pk = model.add(bean);
-			System.out.println("Collage added Succesfully");
-		  CollegeBean existbean = model.findByPk(pk);
+			System.out.println("Course added Succesfully");
+		  CourseBean existbean = model.findByPk(pk);
 			if (existbean == null) {
 				System.out.println("Test add fail");
 			}
@@ -52,9 +51,9 @@ public class TestCollegeModel {
 
 	public static void testUpdate() throws Exception {
 		try {
-			CollegeModel model = new CollegeModel();
+			CourseModel  model = new CourseModel ();
 			
-		CollegeBean bean = model.findByPk(1L);
+			CourseBean bean = model.findByPk(1L);
 	
 			bean.setName("SAGE");
          
@@ -66,22 +65,22 @@ public class TestCollegeModel {
 	}
 
 	public static void testDelete() throws Exception {
-		CollegeModel model = new CollegeModel();
-		CollegeBean existbean = model.findByPk(1L);
+		CourseModel model = new CourseModel();
+		CourseBean existbean = model.findByPk(1L);
 
 	
 
 		try {
 			model.delete(existbean);
-			System.out.println("User Deleted Successfully");
+			System.out.println("Course Deleted Successfully");
 		} catch (ApplicationException e) {
 			e.printStackTrace();
 		}
 	}
 
 	public static void testFindByPk() throws Exception {
-		CollegeModel model = new CollegeModel();
-		CollegeBean bean = new CollegeBean();
+		CourseModel model = new CourseModel();
+		CourseBean bean = new CourseBean();
 
 		bean = model.findByPk(1);
 
@@ -91,37 +90,37 @@ public class TestCollegeModel {
 
 			System.out.print(bean.getId());
 			System.out.print("\t" + bean.getName());
-			System.out.print("\t" + bean.getAddress());
-			System.out.print("\t" + bean.getPhoneno());
-			System.out.print("\t" + bean.getState());
-			System.out.print("\t" + bean.getId());
+			System.out.print("\t" + bean.getDescription());
+			System.out.print("\t" + bean.getDuration());
+			System.out.print("\t" + bean.getCreatedDatetime());
+			System.out.print("\t" + bean.getModifiedDatetime());
 		}
 	}
 
 
 	public static void testSearch() throws Exception {
 		try {
-			CollegeModel model = new CollegeModel();
-			CollegeBean bean = new CollegeBean();
+			CourseModel model = new CourseModel();
+			CourseBean bean = new CourseBean();
 
-			bean.setName("DAVV");
+			bean.setName("Python");
 
 			List list = model.search(bean, 1, 5);
 			Iterator it = list.iterator();
 
 			while (it.hasNext()) {
-				bean = (CollegeBean) it.next();
+				bean = (CourseBean) it.next();
 				System.out.print(bean.getId());
 				System.out.print("\t" + bean.getName());
-				System.out.print("\t" + bean.getPhoneno());
+				System.out.print("\t" + bean.getDescription());
 			}
 		} catch (ApplicationException e) {
 			e.printStackTrace();
 		}
 	}
 	public static void  testfindbyName() throws Exception {
-		CollegeModel model = new CollegeModel();
-		CollegeBean bean = new CollegeBean();
+		CourseModel model = new CourseModel();
+		CourseBean bean = new CourseBean();
 
 		bean = model.findByName("SAGE");
 
@@ -131,10 +130,7 @@ public class TestCollegeModel {
 
 			System.out.print(bean.getId());
 			System.out.print("\t" + bean.getName());
-			System.out.print("\t" + bean.getAddress());
-			System.out.print("\t" + bean.getPhoneno());
-			System.out.print("\t" + bean.getState());
-			System.out.print("\t" + bean.getId());
+			System.out.print("\t" + bean.getDescription());
 		}
 	}
 
