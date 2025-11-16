@@ -7,7 +7,7 @@ import java.util.Set;
 import in.co.rays.proj04.bean.DropDownListBean;
 import in.co.rays.proj04.model.RoleModel;
 
-public class HtmlUtility {
+public class HTMLUtility {
 
 	public static String getList(String name, String selectedVal, HashMap<String, String> map) {
 
@@ -66,7 +66,7 @@ public class HtmlUtility {
 		map.put("female", "female");
 
 		String selectedValue = "male";
-		String htmlSelectFromMap = HtmlUtility.getList("gender", selectedValue, map);
+		String htmlSelectFromMap = HTMLUtility.getList("gender", selectedValue, map);
 
 		System.out.println(htmlSelectFromMap);
 	}
@@ -81,7 +81,7 @@ public class HtmlUtility {
 
 		String selectedValue = "1";
 
-		String htmlSelectFromList = HtmlUtility.getList("role", selectedValue, list);
+		String htmlSelectFromList = HTMLUtility.getList("role", selectedValue, list);
 
 		System.out.println(htmlSelectFromList);
 	}

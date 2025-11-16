@@ -17,11 +17,11 @@ import in.co.rays.proj04.bean.RoleBean;
 		public static void main(String[] args) throws Exception {
 			
 			//testAdd();
-			testUpdate();
+			//testUpdate();
 			//testDelete();
 			//testFindByPk();
 			//testFindbyName();
-			 // testbySearch();
+			 testbySearch();
 		}
 		
 		public static void testAdd() throws Exception {
@@ -121,7 +121,7 @@ import in.co.rays.proj04.bean.RoleBean;
     	   
 			List list = new ArrayList();
 			
-			bean.setName("Ankit");
+			bean.setName("Kiosk");
 			
 			list = model.search(bean,1,5);
 		

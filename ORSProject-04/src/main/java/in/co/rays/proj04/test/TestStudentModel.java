@@ -17,7 +17,7 @@ public class TestStudentModel {
 	
 	public static void main(String[]args) throws Exception {
 		
-		//testAdd();
+		testAdd();
 		//testUpdate();
 		//testDelete();
 		//testFindByPk();

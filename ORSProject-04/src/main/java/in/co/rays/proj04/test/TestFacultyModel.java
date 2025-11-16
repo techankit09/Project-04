@@ -14,7 +14,7 @@ public class TestFacultyModel {
 
 	public static void main(String[] args) throws ParseException {
 
-		// testAdd();
+		//testAdd();
 		// testUpdate();
 		// testDelete();
 		testSearch();
@@ -75,6 +75,8 @@ public class TestFacultyModel {
 
 		FacultyModel model = new FacultyModel();
 		FacultyBean bean = new FacultyBean();
+		
+		
 
 		try {
 			List list = model.search(bean, 0, 0);

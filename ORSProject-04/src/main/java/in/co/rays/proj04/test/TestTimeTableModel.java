@@ -21,10 +21,10 @@ public class TestTimeTableModel {
 
 	public static void main(String[] args) throws ParseException {
 
-		// testAdd();
+		 testAdd();
 		// testUpdate();
 		// testDelete();
-		testSearch();
+		//testSearch();
 	}
 
 	public static void testAdd() throws ParseException {

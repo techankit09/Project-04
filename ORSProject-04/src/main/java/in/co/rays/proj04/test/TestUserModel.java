@@ -17,11 +17,11 @@ public class TestUserModel {
 		
 		//testAdd();
 		//testUpdate();
-		//testDelete();
+		testDelete();
 		//testFindByPk();
 		//testFindByLogin();
 		//testAuthenticate();
-		testSearch();
+		//testSearch();
 	}
 
 	public static void testAdd() throws Exception {

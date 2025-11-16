@@ -13,7 +13,7 @@ import in.co.rays.proj04.model.SubjectModel;
 public class TestSubjectModel {
 
 	public static void main(String[] args) {
-		// testAdd();
+		//testAdd();
 		//testUpdate();
 		//testDelete();
 		testSearch();
@@ -41,7 +41,8 @@ public class TestSubjectModel {
 		SubjectModel model = new SubjectModel();
 		try {
 			SubjectBean bean = model.findByPk(1l);
-			bean.setCourseId(2);
+			//bean.setCourseId(2);
+			bean.setCourseName("Python");
 
 			model.update(bean);
 		} catch (ApplicationException | DuplicateRecordException e) {
