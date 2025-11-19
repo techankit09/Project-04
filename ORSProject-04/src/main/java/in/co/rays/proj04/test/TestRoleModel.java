@@ -16,12 +16,12 @@ import in.co.rays.proj04.bean.RoleBean;
 		
 		public static void main(String[] args) throws Exception {
 			
-			//testAdd();
+			testAdd();
 			//testUpdate();
 			//testDelete();
 			//testFindByPk();
 			//testFindbyName();
-			 testbySearch();
+			// testbySearch();
 		}
 		
 		public static void testAdd() throws Exception {
@@ -29,7 +29,7 @@ import in.co.rays.proj04.bean.RoleBean;
 			try {
 				RoleModel model = new RoleModel();
 				RoleBean bean = new RoleBean();
-				bean.setName("Kiosk");
+				bean.setName("Admin");
 				bean.setDescription("admin");
 				bean.setCreatedBy("admin");
 				bean.setModifiedBy("admin");

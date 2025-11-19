@@ -37,31 +37,31 @@
 			<table>
 				<tr>
 					<th>First Name:</th>
-					<td><input type="text" name="firstName"
+					<td><input type="text" name="firstName" placeholder="Enter First Name"
 						value="<%=DataUtility.getStringData(bean.getFirstName())%>"></td>
 					<td style="position: fixed;"><font color="red"> <%=ServletUtility.getErrorMessage("firstName", request)%></font></td>
 				</tr>
 				<tr>
 					<th>Last Name:</th>
-					<td><input type="text" name="lastName"
+					<td><input type="text" name="lastName" placeholder="Enter Last Name"
 						value="<%=DataUtility.getStringData(bean.getLastName())%>"></td>
 					<td style="position: fixed;"><font color="red"> <%=ServletUtility.getErrorMessage("lastName", request)%></font></td>
 				</tr>
 				<tr>
 					<th>Login ID:</th>
-					<td><input type="text" name="login"
+					<td><input type="text" name="login" placeholder="Enter Login Id"
 						value="<%=DataUtility.getStringData(bean.getLogin())%>"></td>
 					<td style="position: fixed;"><font color="red"> <%=ServletUtility.getErrorMessage("login", request)%></font></td>
 				</tr>
 				<tr>
 					<th>Password:</th>
-					<td><input type="text" name="password"
+					<td><input type="text" name="password" placeholder="Enter Password"
 						value="<%=DataUtility.getStringData(bean.getPassword())%>"></td>
 					<td style="position: fixed;"><font color="red"> <%=ServletUtility.getErrorMessage("password", request)%></font></td>
 				</tr>
 				<tr>
 					<th>Confirm:</th>
-					<td><input type="text" name="confirmPassword"
+					<td><input type="text" name="confirmPassword" placeholder="Re-enter Password"
 						value="<%=DataUtility.getStringData(bean.getConfirmPassword())%>"></td>
 					<td style="position: fixed;"><font color="red"> <%=ServletUtility.getErrorMessage("confirmPassword", request)%></font></td>
 				</tr>
@@ -84,7 +84,7 @@
 				</tr>
 				<tr>
 					<th>Mobile:</th>
-					<td><input type="text" name="mobileNo"
+					<td><input type="text" name="mobileNo" placeholder="Enter MobileNo"
 						value="<%=DataUtility.getStringData(bean.getMobileNo())%>"></td>
 					<td style="position: fixed;"><font color="red"> <%=ServletUtility.getErrorMessage("mobileNo", request)%></font></td>
 				</tr>

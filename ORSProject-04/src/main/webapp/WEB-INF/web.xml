@@ -4,4 +4,24 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>RoleCtl</servlet-name>
+  	<display-name>RoleCtl</display-name>
+  	<description></description>
+  	<servlet-class>in.co.rays.proj04.controller.RoleCtl</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>StudentCtl</servlet-name>
+  	<display-name>StudentCtl</display-name>
+  	<description></description>
+  	<servlet-class>in.co.rays.proj04.controller.StudentCtl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>RoleCtl</servlet-name>
+  	<url-pattern>/RoleCtl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>StudentCtl</servlet-name>
+  	<url-pattern>/StudentCtl</url-pattern>
+  </servlet-mapping>
 </web-app>
