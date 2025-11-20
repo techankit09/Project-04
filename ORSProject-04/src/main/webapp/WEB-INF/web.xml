@@ -16,6 +16,36 @@
   	<description></description>
   	<servlet-class>in.co.rays.proj04.controller.StudentCtl</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>MarksheetCtl</servlet-name>
+  	<display-name>MarksheetCtl</display-name>
+  	<description></description>
+  	<servlet-class>in.co.rays.proj04.controller.MarksheetCtl</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>CourseCtl</servlet-name>
+  	<display-name>CourseCtl</display-name>
+  	<description></description>
+  	<servlet-class>in.co.rays.proj04.controller.CourseCtl</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SubjectCtl</servlet-name>
+  	<display-name>SubjectCtl</display-name>
+  	<description></description>
+  	<servlet-class>in.co.rays.proj04.controller.SubjectCtl</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>TimetableCtl</servlet-name>
+  	<display-name>TimetableCtl</display-name>
+  	<description></description>
+  	<servlet-class>in.co.rays.proj04.controller.TimetableCtl</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>FacultyCtl</servlet-name>
+  	<display-name>FacultyCtl</display-name>
+  	<description></description>
+  	<servlet-class>in.co.rays.proj04.controller.FacultyCtl</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>RoleCtl</servlet-name>
   	<url-pattern>/RoleCtl</url-pattern>
@@ -23,5 +53,25 @@
   <servlet-mapping>
   	<servlet-name>StudentCtl</servlet-name>
   	<url-pattern>/StudentCtl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>MarksheetCtl</servlet-name>
+  	<url-pattern>/MarksheetCtl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CourseCtl</servlet-name>
+  	<url-pattern>/CourseCtl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SubjectCtl</servlet-name>
+  	<url-pattern>/SubjectCtl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>TimetableCtl</servlet-name>
+  	<url-pattern>/TimetableCtl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>FacultyCtl</servlet-name>
+  	<url-pattern>/FacultyCtl</url-pattern>
   </servlet-mapping>
 </web-app>

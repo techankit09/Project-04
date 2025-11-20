@@ -130,15 +130,15 @@
 					<%
 						if (bean != null && bean.getId() > 0) {
 					%>
-					<td align="left" colspan="2"><input type="submit"
-						name="operation" value="<%=UserCtl.OP_UPDATE%>"> <input
-						type="submit" name="operation" value="<%=UserCtl.OP_CANCEL%>">
+					<td align="left" colspan="2">
+					<input type="submit" name="operation" value="<%=UserCtl.OP_UPDATE%>">
+				     <input type="submit" name="operation" value="<%=UserCtl.OP_CANCEL%>">
 						<%
 							} else {
 						%>
-					<td align="left" colspan="2"><input type="submit"
-						name="operation" value="<%=UserCtl.OP_SAVE%>"> <input
-						type="submit" name="operation" value="<%=UserCtl.OP_RESET%>">
+					<td align="left" colspan="2">
+					<input type="submit" name="operation" value="<%=UserCtl.OP_SAVE%>">
+					 <input type="submit" name="operation" value="<%=UserCtl.OP_RESET%>">
 						<%
 							}
 						%>

@@ -1,13 +1,24 @@
+<%@page import="in.co.rays.proj04.util.ServletUtility"%>
+<%@page import="in.co.rays.proj04.bean.UserBean"%>
 <%@page import="in.co.rays.proj04.controller.ORSView"%>
 <html>
 <head>
 <title>Online Result System</title>
 <link rel="icon" type="image/png"
-	href="<%=ORSView.APP_CONTEXT%>/img/logo.png" sizes="16x16" />
+	href="<%=ORSView.APP_CONTEXT%>/img/rays.png" sizes="16x16" />
 </head>
 <body>
 	<br>
 	<br>
+	<%
+		UserBean userBean = (UserBean) session.getAttribute("user");
+
+		boolean userLoggedIn = userBean != null;
+
+		if (userLoggedIn) {
+			ServletUtility.forward(ORSView.WELCOME_VIEW, request, response);
+		}
+	%>
 	<marquee behavior="alternate" scrollamount="300" loop="1">
 		<div align="center">
 			<img src="img/customLogo.jpg" align="middle" width="318" height="127"

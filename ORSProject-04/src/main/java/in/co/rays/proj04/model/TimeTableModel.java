@@ -10,13 +10,13 @@ import java.util.List;
 
 import in.co.rays.proj04.bean.CourseBean;
 import in.co.rays.proj04.bean.SubjectBean;
-import in.co.rays.proj04.bean.TimeTableBean;
+import in.co.rays.proj04.bean.TimetableBean;
 import in.co.rays.proj04.exception.ApplicationException;
 import in.co.rays.proj04.exception.DatabaseException;
 import in.co.rays.proj04.exception.DuplicateRecordException;
 import in.co.rays.proj04.util.JDBCDataSource;
 
-public class TimeTableModel {
+public class TimetableModel {
 	
 	public Integer nextPk() throws DatabaseException {
 		
@@ -41,7 +41,7 @@ public class TimeTableModel {
 		return pk + 1;
 	}
 	
-	public long add(TimeTableBean bean) throws ApplicationException, DuplicateRecordException {
+	public long add(TimetableBean bean) throws ApplicationException, DuplicateRecordException {
 		
 		Connection conn = null;
 		int pk = 0;
@@ -90,7 +90,7 @@ public class TimeTableModel {
 		return pk;
 	}
 
-	public void update(TimeTableBean bean) throws ApplicationException, DuplicateRecordException {
+	public void update(TimetableBean bean) throws ApplicationException, DuplicateRecordException {
 
 		Connection conn = null;
 
@@ -137,7 +137,7 @@ public class TimeTableModel {
 		}
 	}
 
-	public void delete(TimeTableBean bean) throws ApplicationException {
+	public void delete(TimetableBean bean) throws ApplicationException {
 		Connection conn = null;
 		try {
 			conn = JDBCDataSource.getConnection();
@@ -160,9 +160,9 @@ public class TimeTableModel {
 		}
 	}
 
-	public TimeTableBean findByPk(long pk) throws ApplicationException {
+	public TimetableBean findByPk(long pk) throws ApplicationException {
 		StringBuffer sql = new StringBuffer("select * from st_timetable where id = ?");
-		TimeTableBean bean = null;
+		TimetableBean bean = null;
 		Connection conn = null;
 		try {
 			conn = JDBCDataSource.getConnection();
@@ -170,7 +170,7 @@ public class TimeTableModel {
 			pstmt.setLong(1, pk);
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
-				bean = new TimeTableBean();
+				bean = new TimetableBean();
 				bean.setId(rs.getLong(1));
 				bean.setSemester(rs.getString(2));
 				bean.setDescription(rs.getString(3));
@@ -195,9 +195,9 @@ public class TimeTableModel {
 		return bean;
 	}
 
-	public TimeTableBean checkByCourseName(Long courseId, Date examDate) throws ApplicationException {
+	public TimetableBean checkByCourseName(Long courseId, Date examDate) throws ApplicationException {
 		StringBuffer sql = new StringBuffer("select * from st_timetable where course_id = ? and exam_date = ?");
-		TimeTableBean bean = null;
+		TimetableBean bean = null;
 		Connection conn = null;
 
 		try {
@@ -208,7 +208,7 @@ public class TimeTableModel {
 
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
-				bean = new TimeTableBean();
+				bean = new TimetableBean();
 				bean.setId(rs.getLong(1));
 				bean.setSemester(rs.getString(2));
 				bean.setDescription(rs.getString(3));
@@ -234,10 +234,10 @@ public class TimeTableModel {
 		return bean;
 	}
 
-	public TimeTableBean checkBySubjectName(Long courseId, Long subjectId, Date examDate) throws ApplicationException {
+	public TimetableBean checkBySubjectName(Long courseId, Long subjectId, Date examDate) throws ApplicationException {
 		StringBuffer sql = new StringBuffer(
 				"select * from st_timetable where course_id = ? and subject_id = ? and exam_date = ?");
-		TimeTableBean bean = null;
+		TimetableBean bean = null;
 		Connection conn = null;
 
 		try {
@@ -249,7 +249,7 @@ public class TimeTableModel {
 
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
-				bean = new TimeTableBean();
+				bean = new TimetableBean();
 				bean.setId(rs.getLong(1));
 				bean.setSemester(rs.getString(2));
 				bean.setDescription(rs.getString(3));
@@ -275,11 +275,11 @@ public class TimeTableModel {
 		return bean;
 	}
 
-	public TimeTableBean checkBySemester(Long courseId, Long subjectId, String semester, Date examDate)
+	public TimetableBean checkBySemester(Long courseId, Long subjectId, String semester, Date examDate)
 			throws ApplicationException {
 		StringBuffer sql = new StringBuffer(
 				"select * from st_timetable where course_id = ? and subject_id = ? and semester = ? and exam_date = ?");
-		TimeTableBean bean = null;
+		TimetableBean bean = null;
 		Connection conn = null;
 
 		try {
@@ -292,7 +292,7 @@ public class TimeTableModel {
 
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
-				bean = new TimeTableBean();
+				bean = new TimetableBean();
 				bean.setId(rs.getLong(1));
 				bean.setSemester(rs.getString(2));
 				bean.setDescription(rs.getString(3));
@@ -317,11 +317,11 @@ public class TimeTableModel {
 		return bean;
 	}
 
-	public TimeTableBean checkByExamTime(Long courseId, Long subjectId, String semester, Date examDate, String examTime,
+	public TimetableBean checkByExamTime(Long courseId, Long subjectId, String semester, Date examDate, String examTime,
 			String description) throws ApplicationException {
 		StringBuffer sql = new StringBuffer(
 				"select * from st_timetable where course_id = ? and subject_id = ? and semester = ? and exam_date = ? and exam_time = ? and description = ?");
-		TimeTableBean bean = null;
+		TimetableBean bean = null;
 		Connection conn = null;
 
 		try {
@@ -336,7 +336,7 @@ public class TimeTableModel {
 
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
-				bean = new TimeTableBean();
+				bean = new TimetableBean();
 				bean.setId(rs.getLong(1));
 				bean.setSemester(rs.getString(2));
 				bean.setDescription(rs.getString(3));
@@ -361,7 +361,7 @@ public class TimeTableModel {
 		return bean;
 	}
 
-	public List<TimeTableBean> search(TimeTableBean bean, int pageNo, int pageSize) throws ApplicationException {
+	public List<TimetableBean> search(TimetableBean bean, int pageNo, int pageSize) throws ApplicationException {
 		StringBuffer sql = new StringBuffer("select * from st_timetable where 1=1");
 
 		if (bean != null) {
@@ -399,14 +399,14 @@ public class TimeTableModel {
 			sql.append(" limit " + pageNo + ", " + pageSize);
 		}
 
-		ArrayList<TimeTableBean> list = new ArrayList<TimeTableBean>();
+		ArrayList<TimetableBean> list = new ArrayList<TimetableBean>();
 		Connection conn = null;
 		try {
 			conn = JDBCDataSource.getConnection();
 			PreparedStatement pstmt = conn.prepareStatement(sql.toString());
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
-				bean = new TimeTableBean();
+				bean = new TimetableBean();
 				bean.setId(rs.getLong(1));
 				bean.setSemester(rs.getString(2));
 				bean.setDescription(rs.getString(3));

@@ -8,11 +8,11 @@ import java.util.List;
 import in.co.rays.proj04.model.CourseModel;
 import in.co.rays.proj04.model.FacultyModel;
 import in.co.rays.proj04.model.MarksheetModel;
-import in.co.rays.proj04.model.TimeTableModel;
+import in.co.rays.proj04.model.TimetableModel;
 import in.co.rays.proj04.bean.CourseBean;
 import in.co.rays.proj04.bean.FacultyBean;
 import in.co.rays.proj04.bean.MarksheetBean;
-import in.co.rays.proj04.bean.TimeTableBean;
+import in.co.rays.proj04.bean.TimetableBean;
 import in.co.rays.proj04.exception.ApplicationException;
 import in.co.rays.proj04.exception.DatabaseException;
 import in.co.rays.proj04.exception.DuplicateRecordException;
@@ -29,8 +29,8 @@ public class TestTimeTableModel {
 
 	public static void testAdd() throws ParseException {
 
-		TimeTableModel model = new TimeTableModel();
-		TimeTableBean bean = new TimeTableBean();
+		TimetableModel model = new TimetableModel();
+		TimetableBean bean = new TimetableBean();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
 		bean.setId(1);
@@ -51,9 +51,9 @@ public class TestTimeTableModel {
 
 	public static void testUpdate() {
 
-		TimeTableModel model = new TimeTableModel();
+		TimetableModel model = new TimetableModel();
 		try {
-			TimeTableBean bean = model.findByPk(1l);
+			TimetableBean bean = model.findByPk(1l);
 			bean.setSemester("first");
 
 			model.update(bean);
@@ -65,8 +65,8 @@ public class TestTimeTableModel {
 
 	public static void testDelete() {
 
-		TimeTableModel model = new TimeTableModel();
-		TimeTableBean bean;
+		TimetableModel model = new TimetableModel();
+		TimetableBean bean;
 		try {
 			bean = model.findByPk(1l);
 			model.delete(bean);
@@ -79,12 +79,12 @@ public class TestTimeTableModel {
 
 	public static void testSearch() {
 
-		TimeTableModel model = new TimeTableModel();
-		TimeTableBean bean = new TimeTableBean();
+		TimetableModel model = new TimetableModel();
+		TimetableBean bean = new TimetableBean();
 
 		try {
 			List list = model.search(bean, 0, 0);
-			Iterator<TimeTableBean> it = list.iterator();
+			Iterator<TimetableBean> it = list.iterator();
 			while (it.hasNext()) {
 				bean = it.next();
 				System.out.println(bean.getId());

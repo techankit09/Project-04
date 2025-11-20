@@ -33,6 +33,16 @@
 	<b>|</b>
 	<a href="StudentCtl"><b>Add Student</b></a>
 	<b>|</b>
+	<a href="MarksheetCtl"><b>Add Marksheet</b></a>
+	<b>|</b>
+	<a href="CourseCtl"><b>Add Course</b></a>
+	<b>|</b>
+	<a href="SubjectCtl"><b>Add Subject</b></a>
+	<b>|</b>
+	<a href="TimetableCtl"><b>Add TimeTable</b></a>
+	<b>|</b>
+	<a href="FacultyCtl"><b>Add Faculty</b></a>
+	<b>|</b>
 	<a href="LoginCtl?operation=<%=LoginCtl.OP_LOG_OUT%>"><b>Logout</b></a>
 	<%
 		} else {
