@@ -1,7 +1,8 @@
-<%@page import="in.co.rays.proj04.controller.ORSView"%>
-<%@page import="in.co.rays.proj04.controller.CollegeCtl"%>
-<%@page import="in.co.rays.proj04.util.DataUtility"%>
-<%@page import="in.co.rays.proj04.util.ServletUtility"%>
+
+<%@page import="in.co.rays.proj4.controller.ORSView"%>
+<%@page import="in.co.rays.proj4.controller.CollegeCtl"%>
+<%@page import="in.co.rays.proj4.util.DataUtility"%>
+<%@page import="in.co.rays.proj4.util.ServletUtility"%>
 
 <html>
 <head>
@@ -12,7 +13,7 @@
     <form action="<%=ORSView.COLLEGE_CTL%>" method="POST">
         <%@ include file="Header.jsp" %>
 
-        <jsp:useBean id="bean" class="in.co.rays.proj04.bean.CollegeBean" scope="request"></jsp:useBean>
+        <jsp:useBean id="bean" class="in.co.rays.proj4.bean.CollegeBean" scope="request"></jsp:useBean>
 
         <div align="center">
             <h1 align="center" style="margin-bottom: -15; color: navy">
@@ -88,7 +89,7 @@
 
                 <tr>
                     <th align="left">Phone No<span style="color: red">*</span></th>
-                    <td><input type="text" name="phoneNo" maxlength="10" placeholder="Enter Phone No." value="<%=DataUtility.getStringData(bean.getPhoneno())%>"></td>
+                    <td><input type="text" name="phoneNo" maxlength="10" placeholder="Enter Phone No." value="<%=DataUtility.getStringData(bean.getPhoneNo())%>"></td>
                     <td style="position: fixed;">
                         <font color="red">
                             <%=ServletUtility.getErrorMessage("phoneNo", request)%>

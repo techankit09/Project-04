@@ -1,10 +1,11 @@
-<%@page import="in.co.rays.proj04.controller.ORSView"%>
+
+<%@page import="in.co.rays.proj4.controller.ORSView"%>
 <%@page import="java.util.Collections"%>
 <%@page import="java.text.DecimalFormat"%>
-<%@page import="in.co.rays.proj04.util.DataUtility"%>
-<%@page import="in.co.rays.proj04.controller.MarksheetListCtl"%>
-<%@page import="in.co.rays.proj04.util.ServletUtility"%>
-<%@page import="in.co.rays.proj04.bean.MarksheetBean"%>
+<%@page import="in.co.rays.proj4.util.DataUtility"%>
+<%@page import="in.co.rays.proj4.controller.MarksheetListCtl"%>
+<%@page import="in.co.rays.proj4.util.ServletUtility"%>
+<%@page import="in.co.rays.proj4.bean.MarksheetBean"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.Iterator"%>
 <html>
@@ -85,7 +86,7 @@
                 %>
                 <tr>
                     <td style="text-align: center;">
-                        <input type="checkbox" class="case" name="ids" value="<%=bean.getId()%>">
+                        <input type="checkbox" name="ids" value="<%=bean.getId()%>">
                     </td>
                     <td style="text-align: center;"><%=index++%></td>
                     <td style="text-align: center; text-transform: uppercase;"><%=bean.getRollNo()%></td>
@@ -96,7 +97,7 @@
                     <td style="text-align: center;"><%=total%></td>
                     <td style="text-align: center;"><%=percentage%> %</td>
                     <td style="text-align: center;">
-                        <a href="MarksheetCtl?id=<%=bean.getId()%>">Edit</a>
+                        <a href="<%=ORSView.MARKSHEET_CTL%>?id=<%=bean.getId()%>">Edit</a>
                     </td>
                 </tr>
                 <%

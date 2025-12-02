@@ -1,10 +1,10 @@
-<%@page import="in.co.rays.proj04.controller.ORSView"%>
-<%@page import="in.co.rays.proj04.util.HTMLUtility"%>
+<%@page import="in.co.rays.proj4.controller.ORSView"%>
+<%@page import="in.co.rays.proj4.util.HTMLUtility"%>
 <%@page import="java.text.SimpleDateFormat"%>
-<%@page import="in.co.rays.proj04.util.DataUtility"%>
-<%@page import="in.co.rays.proj04.controller.SubjectListCtl"%>
-<%@page import="in.co.rays.proj04.util.ServletUtility"%>
-<%@page import="in.co.rays.proj04.bean.SubjectBean"%>
+<%@page import="in.co.rays.proj4.util.DataUtility"%>
+<%@page import="in.co.rays.proj4.controller.SubjectListCtl"%>
+<%@page import="in.co.rays.proj4.util.ServletUtility"%>
+<%@page import="in.co.rays.proj4.bean.SubjectBean"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.Iterator"%>
 
@@ -27,7 +27,7 @@
             </h3>
         </div>
 
-        <jsp:useBean id="bean" class="in.co.rays.proj04.bean.SubjectBean" scope="request"></jsp:useBean>
+        <jsp:useBean id="bean" class="in.co.rays.proj4.bean.SubjectBean" scope="request"></jsp:useBean>
         <form action="<%=ORSView.SUBJECT_LIST_CTL%>" method="post">
 
             <%
@@ -78,14 +78,14 @@
                 %>
                 <tr>
                     <td style="text-align: center;">
-                        <input type="checkbox" class="case" name="ids" value="<%=bean.getId()%>">
+                        <input type="checkbox"  name="ids" value="<%=bean.getId()%>">
                     </td>
                     <td style="text-align: center;"><%=index++%></td>
                     <td style="text-align: center; text-transform: capitalize;"><%=bean.getName()%></td>
                     <td style="text-align: center; text-transform: capitalize;"><%=bean.getCourseName()%></td>
                     <td style="text-align: center; text-transform: capitalize;"><%=bean.getDescription()%></td>
                     <td style="text-align: center;">
-                        <a href="SubjectCtl?id=<%=bean.getId()%>">Edit</a>
+                        <a href="<%=ORSView.SUBJECT_CTL%>?id=<%=bean.getId()%>">Edit</a>
                     </td>
                 </tr>
                 <%

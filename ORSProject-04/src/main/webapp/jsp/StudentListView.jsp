@@ -1,9 +1,10 @@
-<%@page import="in.co.rays.proj04.controller.ORSView"%>
+
+<%@page import="in.co.rays.proj4.controller.ORSView"%>
 <%@page import="java.text.SimpleDateFormat"%>
-<%@page import="in.co.rays.proj04.util.DataUtility"%>
-<%@page import="in.co.rays.proj04.controller.StudentListCtl"%>
-<%@page import="in.co.rays.proj04.util.ServletUtility"%>
-<%@page import="in.co.rays.proj04.bean.StudentBean"%>
+<%@page import="in.co.rays.proj4.util.DataUtility"%>
+<%@page import="in.co.rays.proj4.controller.StudentListCtl"%>
+<%@page import="in.co.rays.proj4.util.ServletUtility"%>
+<%@page import="in.co.rays.proj4.bean.StudentBean"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.Iterator"%>
 <html>
@@ -80,7 +81,7 @@
                         StudentBean bean = it.next();
                 %>
                 <tr>
-                    <td style="text-align: center;"><input type="checkbox" class="case" name="ids" value="<%=bean.getId()%>"></td>
+                    <td style="text-align: center;"><input type="checkbox" name="ids" value="<%=bean.getId()%>"></td>
                     <td style="text-align: center;"><%=index++%></td>
                     <td style="text-align: center; text-transform: capitalize;"><%=bean.getFirstName()%></td>
                     <td style="text-align: center; text-transform: capitalize;"><%=bean.getLastName()%></td>
@@ -93,7 +94,7 @@
                         String date = sdf.format(bean.getDob());
                     %>
                     <td style="text-align: center;"><%=date%></td>
-                    <td style="text-align: center;"><a href="StudentCtl?id=<%=bean.getId()%>">Edit</a></td>
+                    <td style="text-align: center;"><a href="<%=ORSView.STUDENT_CTL%>?id=<%=bean.getId()%>">Edit</a></td>
                 </tr>
                 <%
                     }

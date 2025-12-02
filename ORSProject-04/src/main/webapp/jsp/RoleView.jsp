@@ -1,8 +1,9 @@
-<%@page import="in.co.rays.proj04.controller.ORSView"%>
-<%@page import="in.co.rays.proj04.controller.RoleCtl"%>
-<%@page import="in.co.rays.proj04.controller.BaseCtl"%>
-<%@page import="in.co.rays.proj04.util.DataUtility"%>
-<%@page import="in.co.rays.proj04.util.ServletUtility"%>
+
+<%@page import="in.co.rays.proj4.controller.ORSView"%>
+<%@page import="in.co.rays.proj4.controller.RoleCtl"%>
+<%@page import="in.co.rays.proj4.controller.BaseCtl"%>
+<%@page import="in.co.rays.proj4.util.DataUtility"%>
+<%@page import="in.co.rays.proj4.util.ServletUtility"%>
 <html>
 <head>
     <title>Add Role</title>
@@ -12,7 +13,7 @@
     <form action="<%=ORSView.ROLE_CTL%>" method="post">
         <%@ include file="Header.jsp"%>
 
-        <jsp:useBean id="bean" class="in.co.rays.proj04.bean.RoleBean" scope="request"></jsp:useBean>
+        <jsp:useBean id="bean" class="in.co.rays.proj4.bean.RoleBean" scope="request"></jsp:useBean>
 
         <div align="center">
             <h1 align="center" style="margin-bottom: -15; color: navy">

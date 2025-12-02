@@ -1,11 +1,11 @@
-<%@page import="in.co.rays.proj04.controller.ORSView"%>
+<%@page import="in.co.rays.proj4.controller.ORSView"%>
 <%@page import="java.util.LinkedHashMap"%>
-<%@page import="in.co.rays.proj04.util.HTMLUtility"%>
+<%@page import="in.co.rays.proj4.util.HTMLUtility"%>
 <%@page import="java.text.SimpleDateFormat"%>
-<%@page import="in.co.rays.proj04.util.DataUtility"%>
-<%@page import="in.co.rays.proj04.controller.TimetableListCtl"%>
-<%@page import="in.co.rays.proj04.util.ServletUtility"%>
-<%@page import="in.co.rays.proj04.bean.TimetableBean"%>
+<%@page import="in.co.rays.proj4.util.DataUtility"%>
+<%@page import="in.co.rays.proj4.controller.TimetableListCtl"%>
+<%@page import="in.co.rays.proj4.util.ServletUtility"%>
+<%@page import="in.co.rays.proj4.bean.TimetableBean"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.Iterator"%>
 <html>
@@ -28,7 +28,7 @@
 				<font color="green"><%=ServletUtility.getSuccessMessage(request)%></font>
 			</h3>
 		</div>
-		<jsp:useBean id="bean" class="in.co.rays.proj04.bean.TimetableBean"
+		<jsp:useBean id="bean" class="in.co.rays.proj4.bean.TimetableBean"
 			scope="request"></jsp:useBean>
 
 		<form action="<%=ORSView.TIMETABLE_LIST_CTL%>" method="post">
@@ -96,7 +96,7 @@
 					<td style="text-align: center; text-transform: capitalize;"><%=bean.getExamTime()%></td>
 					<td style="text-align: center; text-transform: capitalize;"><%=bean.getDescription()%></td>
 					<td style="text-align: center;"><a
-						href="TimetableCtl?id=<%=bean.getId()%>">Edit</a></td>
+						href="<%=ORSView.TIMETABLE_CTL%>?id=<%=bean.getId()%>">Edit</a></td>
 				</tr>
 				<%
 					}

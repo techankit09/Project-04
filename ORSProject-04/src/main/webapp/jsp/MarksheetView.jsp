@@ -1,9 +1,10 @@
-<%@page import="in.co.rays.proj04.controller.ORSView"%>
-<%@page import="in.co.rays.proj04.controller.MarksheetCtl"%>
+
+<%@page import="in.co.rays.proj4.controller.ORSView"%>
+<%@page import="in.co.rays.proj4.controller.MarksheetCtl"%>
 <%@page import="java.util.List"%>
-<%@page import="in.co.rays.proj04.util.HTMLUtility"%>
-<%@page import="in.co.rays.proj04.util.DataUtility"%>
-<%@page import="in.co.rays.proj04.util.ServletUtility"%>
+<%@page import="in.co.rays.proj4.util.HTMLUtility"%>
+<%@page import="in.co.rays.proj4.util.DataUtility"%>
+<%@page import="in.co.rays.proj4.util.ServletUtility"%>
 <html>
 <head>
     <title>Add Marksheet</title>
@@ -14,7 +15,7 @@
     <div align="center">
         <form action="<%=ORSView.MARKSHEET_CTL%>" method="post">
 
-            <jsp:useBean id="bean" class="in.co.rays.proj04.bean.MarksheetBean" scope="request"></jsp:useBean>
+            <jsp:useBean id="bean" class="in.co.rays.proj4.bean.MarksheetBean" scope="request"></jsp:useBean>
 
             <%
                 List studentList = (List) request.getAttribute("studentList");

@@ -1,13 +1,13 @@
-\<%@page import="in.co.rays.proj04.bean.RoleBean"%>
-<%@page import="in.co.rays.proj04.controller.ORSView"%>
-<%@page import="in.co.rays.proj04.util.HTMLUtility"%>
-<%@page import="in.co.rays.proj04.model.RoleModel"%>
+<%@page import="in.co.rays.proj4.bean.RoleBean"%>
+<%@page import="in.co.rays.proj4.controller.ORSView"%>
+<%@page import="in.co.rays.proj4.util.HTMLUtility"%>
+<%@page import="in.co.rays.proj4.model.RoleModel"%>
 <%@page import="java.util.Date"%>
 <%@page import="java.text.SimpleDateFormat"%>
-<%@page import="in.co.rays.proj04.util.DataUtility"%>
-<%@page import="in.co.rays.proj04.bean.BaseBean"%>
-<%@page import="in.co.rays.proj04.controller.UserListCtl"%>
-<%@page import="in.co.rays.proj04.util.ServletUtility"%>
+<%@page import="in.co.rays.proj4.util.DataUtility"%>
+<%@page import="in.co.rays.proj4.bean.BaseBean"%>
+<%@page import="in.co.rays.proj4.controller.UserListCtl"%>
+<%@page import="in.co.rays.proj4.util.ServletUtility"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.Iterator"%>
 
@@ -19,7 +19,7 @@
 <body>
     <%@include file="Header.jsp"%>
 
-    <jsp:useBean id="bean" class="in.co.rays.proj04.bean.UserBean" scope="request"></jsp:useBean>
+    <jsp:useBean id="bean" class="in.co.rays.proj4.bean.UserBean" scope="request"></jsp:useBean>
 
     <div align="center">
         <h1 align="center" style="margin-bottom: -15; color: navy;">User List</h1>
@@ -92,7 +92,7 @@
 
                 <tr>
                     <td style="text-align: center;">
-                        <input type="checkbox" class="case" name="ids" value="<%=bean.getId()%>"
+                        <input type="checkbox" name="ids" value="<%=bean.getId()%>"
                             <%= (user.getId() == bean.getId() || bean.getRoleId() == RoleBean.ADMIN) ? "disabled" : "" %>>
                     </td>
                     <td style="text-align: center;"><%=index++%></td>

@@ -1,10 +1,11 @@
-<%@page import="in.co.rays.proj04.controller.ORSView"%>
-<%@page import="in.co.rays.proj04.util.HTMLUtility"%>
+
+<%@page import="in.co.rays.proj4.controller.ORSView"%>
+<%@page import="in.co.rays.proj4.util.HTMLUtility"%>
 <%@page import="java.util.Collections"%>
-<%@page import="in.co.rays.proj04.util.DataUtility"%>
-<%@page import="in.co.rays.proj04.controller.CollegeListCtl"%>
-<%@page import="in.co.rays.proj04.util.ServletUtility"%>
-<%@page import="in.co.rays.proj04.bean.CollegeBean"%>
+<%@page import="in.co.rays.proj4.util.DataUtility"%>
+<%@page import="in.co.rays.proj4.controller.CollegeListCtl"%>
+<%@page import="in.co.rays.proj4.util.ServletUtility"%>
+<%@page import="in.co.rays.proj4.bean.CollegeBean"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.Iterator"%>
 
@@ -16,7 +17,7 @@
 <body>
     <%@include file="Header.jsp"%>
     <div align="center">
-        <jsp:useBean id="bean" class="in.co.rays.proj04.bean.CollegeBean" scope="request"></jsp:useBean>
+        <jsp:useBean id="bean" class="in.co.rays.proj4.bean.CollegeBean" scope="request"></jsp:useBean>
         <h1 align="center" style="margin-bottom: -15; color: navy;">College List</h1>
 
         <div style="height: 15px; margin-bottom: 12px">
@@ -85,8 +86,8 @@
                     <td style="text-align: center; text-transform: capitalize;"><%=bean.getAddress()%></td>
                     <td style="text-align: center; text-transform: capitalize;"><%=bean.getState()%></td>
                     <td style="text-align: center; text-transform: capitalize;"><%=bean.getCity()%></td>
-                    <td style="text-align: center;"><%=bean.getPhoneno()%></td>
-                    <td style="text-align: center;"><a href="CollegeCtl?id=<%=bean.getId()%>">Edit</a></td>
+                    <td style="text-align: center;"><%=bean.getPhoneNo()%></td>
+                    <td style="text-align: center;"><a href="<%=ORSView.COLLEGE_CTL%>?id=<%=bean.getId()%>">Edit</a></td>
                 </tr>
                 <%
                     }

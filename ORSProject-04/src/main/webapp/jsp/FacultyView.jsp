@@ -1,12 +1,13 @@
-<%@page import="in.co.rays.proj04.controller.ORSView"%>
-<%@page import="in.co.rays.proj04.controller.UserCtl"%>
-<%@page import="in.co.rays.proj04.bean.FacultyBean"%>
+
+<%@page import="in.co.rays.proj4.controller.ORSView"%>
+<%@page import="in.co.rays.proj4.controller.UserCtl"%>
+<%@page import="in.co.rays.proj4.bean.FacultyBean"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.HashMap"%>
-<%@page import="in.co.rays.proj04.util.HTMLUtility"%>
-<%@page import="in.co.rays.proj04.controller.FacultyCtl"%>
-<%@page import="in.co.rays.proj04.util.DataUtility"%>
-<%@page import="in.co.rays.proj04.util.ServletUtility"%>
+<%@page import="in.co.rays.proj4.util.HTMLUtility"%>
+<%@page import="in.co.rays.proj4.controller.FacultyCtl"%>
+<%@page import="in.co.rays.proj4.util.DataUtility"%>
+<%@page import="in.co.rays.proj4.util.ServletUtility"%>
 <html>
 <head>
 <title>Add Faculty</title>
@@ -17,7 +18,7 @@
 	<form action="<%=ORSView.FACULTY_CTL%>" method="post">
 		<%@ include file="Header.jsp"%>
 
-		<jsp:useBean id="bean" class="in.co.rays.proj04.bean.FacultyBean"
+		<jsp:useBean id="bean" class="in.co.rays.proj4.bean.FacultyBean"
 			scope="request"></jsp:useBean>
 
 		<%

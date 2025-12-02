@@ -1,15 +1,16 @@
-<%@page import="in.co.rays.proj04.controller.ORSView"%>
+
+<%@page import="in.co.rays.proj4.controller.ORSView"%>
 <%@page import="java.util.LinkedHashMap"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Collections"%>
-<%@page import="in.co.rays.proj04.controller.UserCtl"%>
-<%@page import="in.co.rays.proj04.bean.TimetableBean"%>
+<%@page import="in.co.rays.proj4.controller.UserCtl"%>
+<%@page import="in.co.rays.proj4.bean.TimetableBean"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.HashMap"%>
-<%@page import="in.co.rays.proj04.util.HTMLUtility"%>
-<%@page import="in.co.rays.proj04.controller.TimetableCtl"%>
-<%@page import="in.co.rays.proj04.util.DataUtility"%>
-<%@page import="in.co.rays.proj04.util.ServletUtility"%>
+<%@page import="in.co.rays.proj4.util.HTMLUtility"%>
+<%@page import="in.co.rays.proj4.controller.TimetableCtl"%>
+<%@page import="in.co.rays.proj4.util.DataUtility"%>
+<%@page import="in.co.rays.proj4.util.ServletUtility"%>
 <html>
 <head>
 <title>Add Timetable</title>
@@ -20,7 +21,7 @@
 	<form action="<%=ORSView.TIMETABLE_CTL%>" method="POST">
 		<%@ include file="Header.jsp"%>
 
-		<jsp:useBean id="bean" class="in.co.rays.proj04.bean.TimetableBean"
+		<jsp:useBean id="bean" class="in.co.rays.proj4.bean.TimetableBean"
 			scope="request"></jsp:useBean>
 
 		<%

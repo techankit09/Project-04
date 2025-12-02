@@ -1,10 +1,10 @@
-<%@page import="in.co.rays.proj04.controller.ORSView"%>
-<%@page import="in.co.rays.proj04.util.HTMLUtility"%>
-<%@page import="in.co.rays.proj04.util.DataUtility"%>
-<%@page import="in.co.rays.proj04.controller.CourseListCtl"%>
-<%@page import="in.co.rays.proj04.controller.BaseCtl"%>
-<%@page import="in.co.rays.proj04.bean.CourseBean"%>
-<%@page import="in.co.rays.proj04.util.ServletUtility"%>
+<%@page import="in.co.rays.proj4.controller.ORSView"%>
+<%@page import="in.co.rays.proj4.util.HTMLUtility"%>
+<%@page import="in.co.rays.proj4.util.DataUtility"%>
+<%@page import="in.co.rays.proj4.controller.CourseListCtl"%>
+<%@page import="in.co.rays.proj4.controller.BaseCtl"%>
+<%@page import="in.co.rays.proj4.bean.CourseBean"%>
+<%@page import="in.co.rays.proj4.util.ServletUtility"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.Iterator"%>
 
@@ -15,7 +15,7 @@
 </head>
 <body>
     <%@include file="Header.jsp"%>
-    <jsp:useBean id="bean" class="in.co.rays.proj04.bean.CourseBean" scope="request"></jsp:useBean>
+    <jsp:useBean id="bean" class="in.co.rays.proj4.bean.CourseBean" scope="request"></jsp:useBean>
 
     <div align="center">
         <h1 align="center" style="margin-bottom: -15; color: navy;">Course List</h1>
@@ -85,7 +85,7 @@
                     <td style="text-align: center; text-transform: capitalize;"><%=bean.getDuration()%></td>
                     <td style="text-align: center; text-transform: capitalize;"><%=bean.getDescription()%></td>
                     <td style="text-align: center;">
-                        <a href="CourseCtl?id=<%=bean.getId()%>">Edit</a>
+                        <a href="<%=ORSView.COURSE_CTL%>?id=<%=bean.getId()%>">Edit</a>
                     </td>
                 </tr>
                 <%

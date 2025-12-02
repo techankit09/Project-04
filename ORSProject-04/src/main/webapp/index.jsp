@@ -1,11 +1,12 @@
-<%@page import="in.co.rays.proj04.util.ServletUtility"%>
-<%@page import="in.co.rays.proj04.bean.UserBean"%>
-<%@page import="in.co.rays.proj04.controller.ORSView"%>
+
+<%@page import="in.co.rays.proj4.util.ServletUtility"%>
+<%@page import="in.co.rays.proj4.bean.UserBean"%>
+<%@page import="in.co.rays.proj4.controller.ORSView"%>
 <html>
 <head>
 <title>Online Result System</title>
 <link rel="icon" type="image/png"
-	href="<%=ORSView.APP_CONTEXT%>/img/rays.png" sizes="16x16" />
+	href="<%=ORSView.APP_CONTEXT%>/img/logo.png" sizes="16x16" />
 </head>
 <body>
 	<br>
