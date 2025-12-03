@@ -27,7 +27,7 @@ import java.util.HashMap;
  *     <li>Password Change Notification</li>
  * </ul>
  *
- * @author 
+ * @author  Ankit Rawat
  * @version 1.0
  */
 public class EmailBuilder {

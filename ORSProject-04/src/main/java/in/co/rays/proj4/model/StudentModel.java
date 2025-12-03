@@ -22,7 +22,7 @@ import in.co.rays.proj4.util.JDBCDataSource;
  * (ApplicationException, DatabaseException, DuplicateRecordException).
  * </p>
  *
- * @author Chaitanya Bhatt
+ * @author Ankit Rawat
  * @version 1.0
  */
 public class StudentModel {

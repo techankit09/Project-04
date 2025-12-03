@@ -5,7 +5,7 @@ package in.co.rays.proj4.bean;
  * It includes subject-wise marks, roll number, and student identity details.
  * This class inherits audit fields from {@link BaseBean}.
  *
- * author Chaitanya Bhatt
+ * author  Ankit Rawat
  * @version 1.0
  */
 public class MarksheetBean extends BaseBean {

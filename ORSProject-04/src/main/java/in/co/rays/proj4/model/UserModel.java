@@ -24,7 +24,7 @@ import in.co.rays.proj4.util.JDBCDataSource;
  * This class uses JDBC for interaction with the database and supports
  * operations like registration, password change, and password recovery.
  * 
- * @author Chaitanya Bhatt
+ * @author  Ankit Rawat
  * @version 1.0
  */
 public class UserModel {

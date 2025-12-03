@@ -22,7 +22,7 @@ import java.util.Date;
  *
  * <p>All methods are static so the class can be used without creating an instance.</p>
  *
- * @author 
+ * @author  Ankit Rawat
  * @version 1.0
  */
 public class DataValidator {
