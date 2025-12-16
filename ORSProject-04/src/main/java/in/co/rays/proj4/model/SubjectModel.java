@@ -23,7 +23,7 @@ import in.co.rays.proj4.util.JDBCDataSource;
  * conditions.
  * </p>
  *
- * @author  Ankit Rawat
+ * @author Chaitanya Bhatt
  * @version 1.0
  */
 public class SubjectModel {

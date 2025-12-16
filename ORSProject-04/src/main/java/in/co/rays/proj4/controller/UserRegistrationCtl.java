@@ -30,7 +30,7 @@ import in.co.rays.proj4.util.ServletUtility;
  * </ul>
  * </p>
  *
- * @author  Ankit Rawat
+ * @author Chaitanya Bhatt
  * @version 1.0
  * @see in.co.rays.proj4.model.UserModel
  * @see in.co.rays.proj4.bean.UserBean

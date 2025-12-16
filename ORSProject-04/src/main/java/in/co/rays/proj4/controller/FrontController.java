@@ -26,7 +26,7 @@ import javax.servlet.http.HttpSession;
  * the session has expired.
  * </p>
  *
- * @author  Ankit Rawat
+ * @author Ankit Rawat
  * @version 1.0
  */
 @WebFilter(urlPatterns = { "/doc/*", "/ctl/*" })

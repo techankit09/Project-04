@@ -8,7 +8,7 @@ import java.util.Date;
  * date of birth, mobile number, gender, and assigned role. 
  * This class extends {@link BaseBean} to include standard audit fields.
  *
- * author Ankit Rawat
+ * author Chaitanya Bhatt
  * @version 1.0
  */
 public class UserBean extends BaseBean {

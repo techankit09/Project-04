@@ -18,7 +18,7 @@ package in.co.rays.proj4.util;
  *     <li>{@link #TEXT_MSG} — Plain text email</li>
  * </ul>
  *
- * @author  Ankit Rawat
+ * @author 
  * @version 1.0
  */
 public class EmailMessage {

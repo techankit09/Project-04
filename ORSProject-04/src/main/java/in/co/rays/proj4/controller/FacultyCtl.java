@@ -30,7 +30,7 @@ import in.co.rays.proj4.util.ServletUtility;
  *
  * <p>Supported operations: Save, Update, Cancel, Reset.</p>
  *
- * @author  Ankit Rawat
+ * @author Chaitanya Bhatt
  * @version 1.0
  * @see in.co.rays.proj4.model.FacultyModel
  * @see in.co.rays.proj4.bean.FacultyBean

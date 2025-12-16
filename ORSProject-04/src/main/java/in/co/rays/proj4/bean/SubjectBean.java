@@ -6,7 +6,7 @@ package in.co.rays.proj4.bean;
  * course name, and subject description. This class extends 
  * {@link BaseBean} to include standard audit information.
  *
- * author Ankit Rawat
+ * author Chaitanya Bhatt
  * @version 1.0
  */
 public class SubjectBean extends BaseBean {

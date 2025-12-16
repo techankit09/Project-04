@@ -26,7 +26,7 @@ import in.co.rays.proj4.util.ServletUtility;
  * Supported operations include Search, Next, Previous, New, Delete, Reset and Back.
  * </p>
  * 
- * @author Ankit Rawat
+ * @author Chaitanya Bhatt
  * @version 1.0
  * @see in.co.rays.proj4.model.UserModel
  * @see in.co.rays.proj4.model.RoleModel
@@ -67,6 +67,7 @@ public class UserListCtl extends BaseCtl {
 		bean.setFirstName(DataUtility.getString(request.getParameter("firstName")));
 		bean.setLogin(DataUtility.getString(request.getParameter("login")));
 		bean.setRoleId(DataUtility.getLong(request.getParameter("roleId")));
+		bean.setDob(DataUtility.getDate(request.getParameter("dob")));
 
 		return bean;
 	}

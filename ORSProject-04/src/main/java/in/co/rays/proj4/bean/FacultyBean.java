@@ -8,7 +8,7 @@ import java.util.Date;
  * as well as academic associations like college, course, and subject.
  * This class extends {@link BaseBean} to inherit common audit attributes.
  *
- * author Ankit Rawat
+ * author Chaitanya Bhatt
  * @version 1.0
  */
 public class FacultyBean extends BaseBean {

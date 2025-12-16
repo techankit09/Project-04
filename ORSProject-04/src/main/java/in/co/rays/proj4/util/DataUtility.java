@@ -18,7 +18,7 @@ import java.util.Date;
  * </ul>
  * </p>
  *
- * @author  Ankit Rawat
+ * @author Chaitanya Bhatt
  * @version 1.0
  */
 public class DataUtility {

@@ -31,7 +31,7 @@ import in.co.rays.proj4.util.ServletUtility;
  * {@link RoleModel} to preload role data for dropdowns.
  * </p>
  *
- * @author  Ankit Rawat
+ * @author Chaitanya Bhatt
  * @version 1.0
  * @see in.co.rays.proj4.model.UserModel
  * @see in.co.rays.proj4.model.RoleModel

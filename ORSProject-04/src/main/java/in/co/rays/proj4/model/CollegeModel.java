@@ -20,7 +20,7 @@ import in.co.rays.proj4.util.JDBCDataSource;
  * application-specific checked exceptions to signal error conditions.
  * </p>
  * 
- * @author  Ankit Rawat
+ * @author Chaitanya Bhatt
  * @version 1.0
  */
 public class CollegeModel {

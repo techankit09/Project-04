@@ -5,7 +5,7 @@ package in.co.rays.proj4.bean;
  * name, address, state, city, and phone number. It extends {@link BaseBean}
  * to include common audit fields.
  *
- * @author Ankit Rawat
+ * @author Chaitanya Bhatt
  * @version 1.0
  */
 public class CollegeBean extends BaseBean {

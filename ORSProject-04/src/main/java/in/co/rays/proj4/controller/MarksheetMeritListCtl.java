@@ -23,7 +23,7 @@ import in.co.rays.proj4.util.ServletUtility;
  * simple back operation to return to the welcome page.
  * </p>
  *
- * @author Ankit Rawat
+ * @author Chaitanya Bhatt
  * @version 1.0
  * @see in.co.rays.proj4.model.MarksheetModel
  * @see in.co.rays.proj4.bean.MarksheetBean

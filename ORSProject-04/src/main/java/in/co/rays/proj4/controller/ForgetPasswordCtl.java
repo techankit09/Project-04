@@ -26,7 +26,7 @@ import in.co.rays.proj4.util.ServletUtility;
  * registered, an error message is shown.
  * </p>
  *
- * @author  Ankit Rawat
+ * @author Chaitanya Bhatt
  * @version 1.0
  */
 @WebServlet(name = "ForgetPasswordCtl", urlPatterns = { "/ForgetPasswordCtl" })
