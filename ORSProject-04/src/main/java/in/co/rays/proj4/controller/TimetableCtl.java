@@ -31,7 +31,7 @@ import in.co.rays.proj4.util.ServletUtility;
  * entries (same course/date/subject/semester/time as applicable).
  * </p>
  *
- * @author Chaitanya Bhatt
+ * @author Ankit Rawat
  * @version 1.0
  * @see in.co.rays.proj4.model.TimetableModel
  * @see in.co.rays.proj4.bean.TimetableBean

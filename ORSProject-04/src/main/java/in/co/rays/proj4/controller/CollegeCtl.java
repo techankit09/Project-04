@@ -25,7 +25,7 @@ import in.co.rays.proj4.util.ServletUtility;
  * {@link CollegeModel}. It also performs navigation actions like cancel and reset.
  * </p>
  * 
- * author Chaitanya Bhatt
+ * @author Ankit Rawat
  * @version 1.0
  * @see in.co.rays.proj4.model.CollegeModel
  * @see in.co.rays.proj4.bean.CollegeBean

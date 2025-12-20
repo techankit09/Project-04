@@ -12,7 +12,7 @@ package in.co.rays.proj4.controller;
  * patterns used by servlets.
  * </p>
  *
- * @author Chaitanya Bhatt
+ * @author Ankit Rawat
  * @version 1.0
  */
 public interface ORSView {
@@ -103,6 +103,12 @@ public interface ORSView {
 
 	public String ERROR_VIEW = PAGE_FOLDER + "/ErrorView.jsp";
 	public String ERROR_CTL = APP_CONTEXT + "/ErrorCtl";
+	
+	public String STAFF__VIEW = PAGE_FOLDER + "/StaffView.jsp";
+	public String STAFF_CTL = APP_CONTEXT + "/ctl/StaffCtl";
+	
+	public String STAFF__LIST_VIEW = PAGE_FOLDER + "/StaffListView.jsp";
+	public String STAFF_LIST_CTL = APP_CONTEXT + "/ctl/StaffListCtl";
 
 	public String JAVA_DOC = "/ORSProject-04/doc/index.html";
 }

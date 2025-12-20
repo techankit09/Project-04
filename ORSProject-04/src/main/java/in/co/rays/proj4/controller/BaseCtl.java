@@ -21,8 +21,7 @@ import in.co.rays.proj4.util.ServletUtility;
  * This class also defines standard operation constants used throughout the
  * application (Save, Update, Delete, List, Search, etc.).
  * 
- * author Chaitanya Bhatt
- * 
+ * @author Ankit Rawat * 
  * @version 1.0
  */
 public abstract class BaseCtl extends HttpServlet {

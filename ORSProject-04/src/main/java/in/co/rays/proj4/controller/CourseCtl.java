@@ -26,7 +26,7 @@ import in.co.rays.proj4.util.ServletUtility;
  * Save, Update, Cancel and Reset.
  * </p>
  *
- * @author Chaitanya Bhatt
+ * @author Ankit Rawat
  * @version 1.0
  * @see in.co.rays.proj4.model.CourseModel
  * @see in.co.rays.proj4.bean.CourseBean

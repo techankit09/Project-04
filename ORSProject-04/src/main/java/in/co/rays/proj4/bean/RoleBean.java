@@ -6,7 +6,7 @@ package in.co.rays.proj4.bean;
  * permissions and actions available to the user. This class extends 
  * {@link BaseBean} to include common audit fields.
  *
- * author Chaitanya Bhatt
+ * @author Ankit Rawat
  * @version 1.0
  */
 public class RoleBean extends BaseBean {
