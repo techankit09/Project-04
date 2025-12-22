@@ -14,7 +14,7 @@
 		<h1 align="center">
 			<font size="10px" color="navy">Welcome to ORS</font>
 		</h1>
-<h2>22/12/25</h2>
+
 		<%
 			UserBean beanUserBean = (UserBean) session.getAttribute("user");
 			if (beanUserBean != null) {
