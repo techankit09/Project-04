@@ -87,7 +87,7 @@
 					<th>Previous Employer<span style="color: red">*</span></th>
 					<td><input type="text" name="previousEmployer"
 						placeholder="Enter Previous Employer"
-						value="<%=DataUtility.getStringData(bean.getFullName())%>"></td>
+						value="<%=DataUtility.getStringData(bean.getPreviousEmployer())%>"></td>
 					<td style="position: fixed;"><font color="red"> <%=ServletUtility.getErrorMessage("previousEmployer", request)%>
 					</font></td>
 				</tr>
