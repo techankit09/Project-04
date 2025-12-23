@@ -46,7 +46,7 @@ import in.co.rays.proj4.exception.ApplicationException;
  * email.pwd   = your-password
  * </pre>
  *
- * @author 
+ * @author Ankit Rawat
  * @version 1.0
  */
 public class EmailUtility {

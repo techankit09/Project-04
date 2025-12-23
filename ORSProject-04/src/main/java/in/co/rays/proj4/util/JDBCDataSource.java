@@ -39,10 +39,10 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
  * connections for all model classes.
  * </p>
  *
- * @author
+ * @author Ankit Rawat
  * @version 1.0
  */
-public class JDBCDataSource {
+public final class JDBCDataSource {
 
 	/** Singleton instance of JDBCDataSource */
 	private static JDBCDataSource jds = null;

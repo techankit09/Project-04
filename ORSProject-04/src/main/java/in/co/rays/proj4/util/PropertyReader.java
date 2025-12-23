@@ -31,7 +31,7 @@ import java.util.ResourceBundle;
  * <b>in.co.rays.proj4.bundle.system.properties</b>
  * </p>
  *
- * @author
+ * @author Ankit Rawat
  * @version 1.0
  */
 public class PropertyReader {
