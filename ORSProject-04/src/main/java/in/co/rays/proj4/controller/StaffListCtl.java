@@ -44,7 +44,7 @@ public class StaffListCtl extends BaseCtl {
 		bean.setFullName(DataUtility.getString(request.getParameter("fullName")));
 		bean.setJoiningDate(DataUtility.getDate(request.getParameter("joiningDate")));
 		bean.setDivision(DataUtility.getString(request.getParameter("division")));
-		bean.setPreviousEmployer(DataUtility.getString(request.getParameter("Previous Employer")));
+		bean.setPreviousEmployer(DataUtility.getString(request.getParameter("previousEmployer")));
 
 		return bean;
 	}
