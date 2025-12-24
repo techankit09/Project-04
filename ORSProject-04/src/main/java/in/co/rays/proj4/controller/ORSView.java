@@ -109,6 +109,9 @@ public interface ORSView {
 	
 	public String STAFF__LIST_VIEW = PAGE_FOLDER + "/StaffListView.jsp";
 	public String STAFF_LIST_CTL = APP_CONTEXT + "/ctl/StaffListCtl";
+	
+	public String ACCOUNT_VIEW = PAGE_FOLDER + "/AccountView.jsp";
+	public String ACCOUNT_CTL = APP_CONTEXT + "/ctl/AccountCtl";
 
 	public String JAVA_DOC = "/ORSProject-04/doc/index.html";
 }

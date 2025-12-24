@@ -75,6 +75,8 @@
 
         <a href="<%=ORSView.TIMETABLE_CTL%>"><b>Add Timetable</b></a> |
         <a href="<%=ORSView.TIMETABLE_LIST_CTL%>"><b>Timetable List</b></a> |
+        
+        <a href="<%=ORSView.ACCOUNT_CTL%>"><b>Add Account</b></a> |
 
     <% } %>
 
