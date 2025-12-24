@@ -42,7 +42,7 @@ public class StaffCtl extends BaseCtl {
 		boolean pass = true;
 
 		if (DataValidator.isNull(request.getParameter("fullName"))) {
-			request.setAttribute("fullName", PropertyReader.getValue("error.require", "firstName"));
+			request.setAttribute("fullName", PropertyReader.getValue("error.require", "fullName"));
 		} else if (!DataValidator.isName(request.getParameter("fullName"))) {
 			request.setAttribute("fullName", "Invalid Full Name");
 			pass = false;
