@@ -1,6 +1,7 @@
 package in.co.rays.proj4.controller;
 
 import java.io.IOException;
+import java.util.HashMap;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,6 +20,18 @@ import in.co.rays.proj4.util.ServletUtility;
 
 @WebServlet(name = "AccountCtl", urlPatterns = { "/ctl/AccountCtl" })
 public class AccountCtl extends BaseCtl {
+	
+
+	@Override
+	protected void preload(HttpServletRequest request) {
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("SAVING", "SAVING");
+		map.put("CURRENT", "CURRENT");
+		map.put("BUSINESS", "BUSINESS");
+		request.setAttribute("map", map);
+
+	}
+
 
     @Override
     protected boolean validate(HttpServletRequest request) {

@@ -40,18 +40,21 @@
     <!-- Admin Only -->
     <% if (user.getRoleId() == RoleBean.ADMIN) { %>
 
-        <a href="<%=ORSView.USER_CTL%>"><b>Add User</b></a> |
-        <a href="<%=ORSView.USER_LIST_CTL%>"><b>User List</b></a> |
+    <a href="<%=ORSView.USER_CTL%>"><b>Add User</b></a> |
+    <a href="<%=ORSView.USER_LIST_CTL%>"><b>User List</b></a> |
         
-        <a href="<%=ORSView.ROLE_CTL%>"><b>Add Role</b></a> |
-        <a href="<%=ORSView.ROLE_LIST_CTL%>"><b>Role List</b></a> |
+    <a href="<%=ORSView.ROLE_CTL%>"><b>Add Role</b></a> |
+    <a href="<%=ORSView.ROLE_LIST_CTL%>"><b>Role List</b></a> |
  
         <!-- College menus (Admin only since College role removed) -->
-        <a href="<%=ORSView.COLLEGE_CTL%>"><b>Add College</b></a> |
-        <a href="<%=ORSView.COLLEGE_LIST_CTL%>"><b>College List</b></a> |
+    <a href="<%=ORSView.COLLEGE_CTL%>"><b>Add College</b></a> |
+    <a href="<%=ORSView.COLLEGE_LIST_CTL%>"><b>College List</b></a> |
 
-        <a href="<%=ORSView.STAFF_LIST_CTL%>"><b>Staff List</b></a> |
+    <a href="<%=ORSView.STAFF_LIST_CTL%>"><b>Staff List</b></a> |
 	<a href="<%=ORSView.STAFF_CTL%>"><b>Add Staff</b></a> |
+	
+	<a href="<%=ORSView.HOSTEL_ROOM_CTL%>"><b>Add Hostel Room</b></a> |
+	<a href="<%=ORSView.HOSTEL_ROOM_LIST_CTL%>"><b>Hostel Room List</b></a> |
 
     <% } %>
 
@@ -77,6 +80,7 @@
         <a href="<%=ORSView.TIMETABLE_LIST_CTL%>"><b>Timetable List</b></a> |
         
         <a href="<%=ORSView.ACCOUNT_CTL%>"><b>Add Account</b></a> |
+        <a href="<%=ORSView.ACCOUNT_LIST_CTL%>"><b>Account List</b></a>|
 
     <% } %>
 

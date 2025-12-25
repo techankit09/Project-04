@@ -3,7 +3,11 @@ package in.co.rays.proj4.model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
 import in.co.rays.proj4.bean.AccountBean;
+import in.co.rays.proj4.bean.UserBean;
 import in.co.rays.proj4.exception.ApplicationException;
 import in.co.rays.proj4.exception.DatabaseException;
 import in.co.rays.proj4.exception.DuplicateRecordException;
@@ -215,5 +219,89 @@ public class AccountModel {
         }
         return bean;
     }
+    
 
+	public List<AccountBean> list() throws ApplicationException {
+		return search(null, 0, 0);
+	}
+	
+	public List<AccountBean> search(AccountBean bean, int pageNo, int pageSize)
+	        throws ApplicationException {
+
+	    Connection conn = null;
+	    ArrayList<AccountBean> list = new ArrayList<AccountBean>();
+
+	    StringBuffer sql = new StringBuffer("select * from st_account where 1=1");
+
+	    if (bean != null) {
+
+	        if (bean.getId() > 0) {
+	            sql.append(" and id = " + bean.getId());
+	        }
+
+	        if (bean.getAccountNo() != null && bean.getAccountNo().length() > 0) {
+	            sql.append(" and account_no like '" + bean.getAccountNo() + "%'");
+	        }
+
+	        if (bean.getAccountType() != null && bean.getAccountType().length() > 0) {
+	            sql.append(" and account_type like '" + bean.getAccountType() + "%'");
+	        }
+
+	        if (bean.getBankName() != null && bean.getBankName().length() > 0) {
+	            sql.append(" and bank_name like '" + bean.getBankName() + "%'");
+	        }
+
+	        if (bean.getBalance() != null && bean.getBalance().length() > 0) {
+	            sql.append(" and balance like '" + bean.getBalance() + "%'");
+	        }
+	    }
+
+	    /* ========== Pagination ========== */
+	    if (pageSize > 0) {
+	        pageNo = (pageNo - 1) * pageSize;
+	        sql.append(" limit " + pageNo + ", " + pageSize);
+	    }
+
+	    try {
+	        conn = JDBCDataSource.getConnection();
+	        PreparedStatement pstmt = conn.prepareStatement(sql.toString());
+	        ResultSet rs = pstmt.executeQuery();
+
+	        while (rs.next()) {
+
+	            bean = new AccountBean();
+
+	            bean.setId(rs.getLong(1));              // id
+	            bean.setAccountNo(rs.getString(2));     // account_no
+	            bean.setAccountType(rs.getString(3));   // account_type
+	            bean.setBankName(rs.getString(4));      // bank_name
+	            bean.setBalance(rs.getString(5));       // balance
+
+	            bean.setCreatedBy(rs.getString(6));
+	            bean.setModifiedBy(rs.getString(7));
+	            bean.setCreatedDatetime(rs.getTimestamp(8));
+	            bean.setModifiedDatetime(rs.getTimestamp(9));
+
+	            list.add(bean);
+	        }
+
+	        rs.close();
+	        pstmt.close();
+
+	    } catch (Exception e) {
+	        throw new ApplicationException("Exception : Exception in search Account");
+	    } finally {
+	        JDBCDataSource.closeConnection(conn);
+	    }
+
+	    return list;
+	}
+
+	
 }
+	
+	
+	
+	
+	
+	

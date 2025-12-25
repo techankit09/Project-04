@@ -112,6 +112,16 @@ public interface ORSView {
 	
 	public String ACCOUNT_VIEW = PAGE_FOLDER + "/AccountView.jsp";
 	public String ACCOUNT_CTL = APP_CONTEXT + "/ctl/AccountCtl";
+	
+	public String ACCOUNT_LIST_VIEW = PAGE_FOLDER + "/AccountListView.jsp";
+	public String ACCOUNT_LIST_CTL = APP_CONTEXT + "/ctl/AccountListCtl";
+	
+	public String HOSTEL_ROOM_VIEW = PAGE_FOLDER + "/HostelRoomView.jsp";
+    public String HOSTEL_ROOM_CTL = APP_CONTEXT + "/ctl/HostelRoomCtl";
+    
+    public String HOSTEL_ROOM_LIST_VIEW = PAGE_FOLDER + "/HostelRoomListView.jsp";
+    public String HOSTEL_ROOM_LIST_CTL = APP_CONTEXT + "/ctl/HostelRoomListCtl";
+
 
 	public String JAVA_DOC = "/ORSProject-04/doc/index.html";
 }
